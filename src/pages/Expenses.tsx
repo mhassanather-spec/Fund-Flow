@@ -120,7 +120,7 @@ export default function Expenses() {
       headStyles: { fillColor: [23, 72, 133] },
       didParseCell: function(data) {
         if (data.section === 'body' && data.column.index === 4) { // Amount column
-          if (data.row.raw[3] === 'Income') {
+          if ((data.row.raw as any)[3] === 'Income') {
             data.cell.styles.textColor = [16, 185, 129];
           } else {
             data.cell.styles.textColor = [239, 68, 68];

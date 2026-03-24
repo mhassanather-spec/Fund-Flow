@@ -57,7 +57,7 @@ export function IncomeExpenseChart({ transactions, currency }: Props) {
           <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 12 }} dy={10} />
           <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 12 }} />
           <Tooltip
-            formatter={(value: number) => `${currency}${value.toLocaleString()}`}
+            formatter={(value: any) => `${currency}${Number(value).toLocaleString()}`}
             contentStyle={{ backgroundColor: '#ffffff', borderColor: '#e5e7eb', borderRadius: '12px' }}
             itemStyle={{ color: '#111827' }}
           />
