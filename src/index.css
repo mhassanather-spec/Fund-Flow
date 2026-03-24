@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F8F9FA;
+  --color-foreground: #1A1A1A;
+  --color-card: #FFFFFF;
+  --color-primary: #15BE77; /* FundFlow Teal */
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #F3F4F6;
+  --color-accent: #174885; /* FundFlow Navy Blue */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* Minimal Flat Cards instead of Glassmorphism */
+.glass-panel {
+  @apply bg-card border border-gray-100 shadow-sm rounded-2xl;
+}
+
+.text-gradient {
+  @apply text-primary;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
